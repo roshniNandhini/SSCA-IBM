@@ -1,0 +1,136 @@
+SUSTAINABLE SMART CITY ASSISTANT
+PROJECT DOCUMENTATION
+ECO ASSISTANT AND POLICY ANALYZER
+INTRODUCTION
+Project Title: Eco Assistant & Policy Analyzer
+Team Members: Sruthylaya R, Roshni R, Roshini V, Ranjani R
+This project introduces an AI-powered assistant that promotes sustainable urban living. It
+provides citizens and officials with eco-friendly tips, simplified policy summaries, and
+forecasting tools for smart city planning.
+2. PROJECT OVERVIEW
+Purpose:
+To empower cities and residents to thrive in an eco-conscious, data-driven environment by:
+●
+Reducing environmental impact through personalized eco-tips.
+●
+Supporting officials with simplified policy insights.
+●
+Using AI for forecasting and anomaly detection in city resource usage.
+Key Features:
+●
+Eco-Tips Generator: Personalized sustainability advice.
+●
+Policy Summarization: Simplifies lengthy government documents.
+●
+Resource Forecasting: Predicts energy/water/waste usage.
+●
+Citizen Feedback Loop: Collects and analyzes public input.
+●
+KPI Forecasting & Anomaly Detection: Supports strategic planning.
+●
+Multimodal Input Support: Accepts PDFs, text, and CSV files.
+●
+User-friendly UI: Built with Gradio / Streamlit.
+3. ARCHITECTURE
+●
+Frontend (Gradio/Streamlit): Interactive dashboards, eco-tips, policy summarization.
+
+●
+Backend (FastAPI): Manages document uploads, summarization, forecasting APIs.
+●
+LLMIntegration: Uses IBM Watsonx Granite LLM for natural language generation.
+●
+Vector Search (Pinecone): Stores embedded policy documents for semantic search.
+●
+ML Modules: Forecasting and anomaly detection with scikit-learn.
+4. SETUP INSTRUCTIONS
+Prerequisites:
+●
+Python 3.9+
+●
+Install dependencies (pip install -r requirements.txt)
+●
+API keys (IBM Watsonx, Pinecone)
+●
+Internet access
+Steps:
+1. Clone repo
+2. Install requirements
+3. Configure .env with API keys
+4. Start backend (FastAPI)
+5. Launch frontend (Streamlit / Gradio)
+5. FOLDER STRUCTURE
+●
+app/ – Backend logic (routers, models, APIs)
+●
+ui/ – Frontend (pages, layouts, forms)
+●
+granite_llm.py – IBM Granite model integration
+●
+document_embedder.py – Embeds docs into Pinecone
+●
+kpi_file_forecaster.py – Forecasts resource usage
+●
+anomaly_file_checker.py – Detects anomalies in data
+●
+report_generator.py – Generates sustainability reports
+6. RUNNING THE APPLICATION
+1. Start FastAPI backend
+2. Launch Gradio/Streamlit frontend
+3. Use sidebar navigation (Eco Tips, Policy Summaries, Forecasting)
+
+4. Upload docs or enter keywords
+5. View summaries, predictions, eco-tips in real-time
+7.API DOCUMENTATION
+●
+POST /chat/ask – Query →AI-generated response
+●
+POST /upload-doc – Upload & embed policy docs
+●
+GET /search-docs – Find similar policy texts
+●
+GET /get-eco-tips – Get eco-friendly suggestions
+●
+POST /submit-feedback – Citizen feedback storage
+8. AUTHENTICATION
+●
+Current demo: open access
+●
+Future: JWT, OAuth2, Role-based (admin, citizen, researcher)
+9. USER INTERFACE
+●
+Tabs: Eco Tips Generator, Policy Summarization
+●
+File Upload (PDFs, CSVs)
+●
+Real-time eco advice & policy summaries
+●
+Simple and accessible design
+10. TESTING:
+●
+Unit Testing (prompt engineering, utilities)
+●
+API Testing (Swagger, Postman)
+●
+Manual Testing (uploads, chat, outputs)
+●
+Edge Case Handling (large files, invalid keys)
+
+11. SCREENSHOTS
+12. KNOWN ISSUES
+●
+Large PDFs may take time to summarize.
+●
+Limited to IBM Granite-supported languages.
+●
+Vector search requires internet (Pinecone).
+13. FUTURE ENHANCEMENTS
+●
+Add user login & personalized dashboards.
+●
+Offline caching of eco tips.
+●
+Multi-language support.
+●
+More ML models for urban analytics.
+
